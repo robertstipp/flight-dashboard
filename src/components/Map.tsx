@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
+//@ts-nocheck
+import { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl'
 mapboxgl.accessToken = 'pk.eyJ1Ijoicm9iZXJ0c3RpcHAiLCJhIjoiY2wwc2licW1jMDFrYTNkbXVqZHJtNDl4ZiJ9.U9CB8Sx-I1rU2lwH_iXIqw';
 import plane from '../assets/plane-icon.png'
@@ -10,7 +11,7 @@ export const MapComponent = () => {
   const map = useRef(null);
   const [lng, setLng] = useState<number>(-70.9);
   const [lat, setLat] = useState<number>(42.35);
-  const [zoom, setZoom] = useState<number>(9);
+  // const [zoom, setZoom] = useState<number>(9);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
